@@ -1,0 +1,41 @@
+<%= form_for(@fire) do |f| %>
+  <% if @fire.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@fire.errors.count, "error") %> prohibited this fire from being saved:</h2>
+
+      <ul>
+      <% @fire.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :incident %><br>
+    <%= f.number_field :incident %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_area :description %>
+  </div>
+  <div class="field">
+    <%= f.label :owner %><br>
+    <%= f.text_field :owner %>
+  </div>
+  <div class="field">
+    <%= f.label :status %><br>
+    <%= f.text_field :status %>
+  </div>
+  <div class="field">
+    <%= f.label :root_cause_analysis %><br>
+    <%= f.text_area :root_cause_analysis %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

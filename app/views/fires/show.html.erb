@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @fire.name %>
+</p>
+
+<p>
+  <strong>Incident:</strong>
+  <%= @fire.incident %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @fire.description %>
+</p>
+
+<p>
+  <strong>Owner:</strong>
+  <%= @fire.owner %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @fire.status %>
+</p>
+
+<p>
+  <strong>Root cause analysis:</strong>
+  <%= @fire.root_cause_analysis %>
+</p>
+
+<%= link_to 'Edit', edit_fire_path(@fire) %> |
+<%= link_to 'Back', fires_path %>

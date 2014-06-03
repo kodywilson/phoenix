@@ -1,0 +1,35 @@
+<h1>Listing fires</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Incident</th>
+      <th>Description</th>
+      <th>Owner</th>
+      <th>Status</th>
+      <th>Root cause analysis</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @fires.each do |fire| %>
+      <tr>
+        <td><%= fire.name %></td>
+        <td><%= fire.incident %></td>
+        <td><%= fire.description %></td>
+        <td><%= fire.owner %></td>
+        <td><%= fire.status %></td>
+        <td><%= fire.root_cause_analysis %></td>
+        <td><%= link_to 'Show', fire %></td>
+        <td><%= link_to 'Edit', edit_fire_path(fire) %></td>
+        <td><%= link_to 'Destroy', fire, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Fire', new_fire_path %>
