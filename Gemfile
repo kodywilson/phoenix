@@ -49,5 +49,8 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin]
 # Use devise for authentication
 gem 'devise'
 
+# Allow integration with Gravatar
+gem 'gravtastic'
+
 # Specify Ruby version
 ruby "1.9.3"
