@@ -22,9 +22,9 @@
         <td><%= fire.owner %></td>
         <td><%= fire.status %></td>
         <td><%= fire.root_cause_analysis %></td>
-        <td><%= link_to 'Show', fire %></td>
-        <td><%= link_to 'Edit', edit_fire_path(fire) %></td>
-        <td><%= link_to 'Destroy', fire, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', fire, class: "btn btn-success btn-xs" %></td>
+        <td><%= link_to 'Edit', edit_fire_path(fire), class: "btn btn-info btn-xs" %></td>
+        <td><%= link_to 'Delete', fire, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-warning btn-xs" %></td>
       </tr>
     <% end %>
   </tbody>
@@ -32,4 +32,3 @@
 
 <br>
 <a href="fires/new" class="btn btn-primary active" role="button">Report Fire</a>
-<%= link_to 'Report Fire', new_fire_path %>

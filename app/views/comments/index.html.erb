@@ -1,4 +1,4 @@
-<h1>Listing comments</h1>
+<h1>Comments</h1>
 
 <table>
   <thead>
@@ -16,9 +16,9 @@
         <td><%= comment.user_name %></td>
         <td><%= comment.body %></td>
         <td><%= comment.fire_id %></td>
-        <td><%= link_to 'Show', comment %></td>
-        <td><%= link_to 'Edit', edit_comment_path(comment) %></td>
-        <td><%= link_to 'Destroy', comment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', comment, class: "btn btn-success btn-xs" %></td>
+        <td><%= link_to 'Edit', edit_comment_path(comment), class: "btn btn-info btn-xs" %></td>
+        <td><%= link_to 'Delete', comment, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-warning btn-xs" %></td>
       </tr>
     <% end %>
   </tbody>
@@ -26,4 +26,4 @@
 
 <br>
 
-<%= link_to 'New Comment', new_comment_path %>
+<a href="comments/new" class="btn btn-primary active" role="button">Add Comment</a>

@@ -1,3 +1,8 @@
 language: ruby
 rvm:
-  - 1.9.3
+- 1.9.3
+deploy:
+  provider: heroku
+  api_key:
+    secure: LBuCAHWVuhRyjN39orgejsKb8Wn66i4x2NAxf5uvAI5QD+1ar3uoRK6TfdsS9s42oVM/COTYiUdfIRdWT2RW0pRTWCW8+otwu2STaA84cebHp6NwYSGYCdgzOwByAv0w+y+DPGtRCh6UCPx36WzXs/LYVqeGmhiGwmKp1tXDm2s=
+  run: "rake db:migrate"

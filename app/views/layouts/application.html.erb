@@ -23,9 +23,9 @@
       </div>
       <div class="collapse navbar-collapse">
         <ul class="nav navbar-nav">
-          <li class="active"><a href="/fires">Fires</a></li>
-          <li ><%= link_to 'New Fire', new_fire_path %></li>
-          <li class="active"><a href="/comments">Comments</a></li>
+          <li><a href="/fires">Fires</a></li>
+          <li><a href="/fires/new">Report Fire</a></li>
+          <li><a href="/comments">Comments</a></li>
         </ul>
         <p class="navbar-text pull-right">
         <% if user_signed_in? %>
