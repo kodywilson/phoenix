@@ -46,12 +46,14 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
+          <a class="brand" href="/"><%= image_tag("Phoenix-Egyptian.jpg", alt: "Phoenix", :size => "30x40") %></a>
           <a class="brand" href="/">Phoenix</a>
           <div class="container-fluid nav-collapse">
             <ul class="nav">
               <li><%= link_to "Fires", "/fires"  %></li>
               <li><%= link_to "Report Fire", "/fires/new"  %></li>
               <li><%= link_to "Comments", "/comments"  %></li>
+              <li><%= link_to "About", "/pages/about"  %></li>
             </ul>
             <p class="navbar-text pull-right">
             <% if user_signed_in? %>
