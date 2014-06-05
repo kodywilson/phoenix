@@ -10,9 +10,19 @@ group :test, :development do
   gem 'sqlite3'
 end
 group :production do
+  # Use postgresql for production database
   gem 'pg'
+  # Gem required for Heroku
   gem 'rails_12factor'
 end
+# Gems used for assets
+# group :assets do
+  # Use twitter-bootstrap with app
+  gem 'twitter-bootstrap-rails'
+#  gem "therubyracer"
+#  gem "less-rails"
+#  gem 'twitter-bootstrap-rails'
+# end
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets

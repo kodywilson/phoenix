@@ -1,33 +1,34 @@
-<p>
-  <strong>Name:</strong>
-  <%= @fire.name %>
-</p>
+<%- model_class = Fire -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.titleize %></h1>
+</div>
 
-<p>
-  <strong>Incident:</strong>
-  <%= @fire.incident %>
-</p>
+<dl class="dl-horizontal">
+  <dt><strong><%= model_class.human_attribute_name(:name) %>:</strong></dt>
+  <dd><%= @fire.name %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:incident) %>:</strong></dt>
+  <dd><%= @fire.incident %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:description) %>:</strong></dt>
+  <dd><%= @fire.description %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:owner) %>:</strong></dt>
+  <dd><%= @fire.owner %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:status) %>:</strong></dt>
+  <dd><%= @fire.status %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:root_cause_analysis) %>:</strong></dt>
+  <dd><%= @fire.root_cause_analysis %></dd>
+</dl>
 
-<p>
-  <strong>Description:</strong>
-  <%= @fire.description %>
-</p>
-
-<p>
-  <strong>Owner:</strong>
-  <%= @fire.owner %>
-</p>
-
-<p>
-  <strong>Status:</strong>
-  <%= @fire.status %>
-</p>
-
-<p>
-  <strong>Root cause analysis:</strong>
-  <%= @fire.root_cause_analysis %>
-</p>
-
+<div class="form-actions">
+  <%= link_to t('.back', :default => t("helpers.links.back")),
+              fires_path, :class => 'btn'  %>
+  <%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_fire_path(@fire), :class => 'btn' %>
+  <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              fire_path(@fire),
+              :method => 'delete',
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+              :class => 'btn btn-danger' %>
+</div>
 <h3>Comments</h3>
 <% @comments.each do |comment| %>
   <div>
@@ -38,6 +39,3 @@
   </div>
 <% end %>
 <%= render 'comments/form' %>
-
-<%= link_to 'Edit', edit_fire_path(@fire) %> |
-<%= link_to 'Back', fires_path %>
