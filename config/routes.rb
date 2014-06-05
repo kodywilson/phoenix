@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'pages/about'
+
+  get 'pages/help'
+
   devise_for :users
   resources :comments
 
