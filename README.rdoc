@@ -1,25 +1,27 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
+This application is designed to provide a one stop view into an organization's most pressing events.
 
 * Ruby version
+1.9.3
 
 * System dependencies
+See Gemfile
 
 * Configuration
+See Gemfile
 
-* Database creation
-
-* Database initialization
+* Database creation and initialization
+rake db:migrate
 
 * How to run the test suite
+Rspec
 
 * Services (job queues, cache servers, search engines, etc.)
+NA yet.
 
 * Deployment instructions
+Currently going to Heroku
 
 * ...
 
